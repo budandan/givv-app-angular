@@ -2,7 +2,7 @@
     require('db.php');
     $query = 'SELECT * FROM Users;';
     $result = mysqli_query($conn, $query);
-    $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    $users = mysqli_fetch_all($result, MYSQLI_NUM);
     var_dump($users);
     mysqli_free_result($result);
     mysqli_close($conn);
