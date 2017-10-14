@@ -19,7 +19,7 @@
 
     <body>
         <?php foreach($users as $user) :?>
-        <div class="jumbotron">
+        <div>
             <h2><?php echo $user['name'];?></h2>
         </div>
         <?php endforeach; ?>
