@@ -5,10 +5,10 @@
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
         $query = "SELECT Count(*) FROM Users WHERE (name='$name' AND password='$password')";
-
+        $result = mysqli_query($conn, $query);
         if(mysqli_query($conn, $query)) {
-            echo $query;
-            if ($query == '1') {
+            echo $result;
+            if ($result == '1') {
                 header('Location: home.php');
             } else {
                 echo 'Invalid Username or Password.';
