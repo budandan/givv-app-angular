@@ -11,8 +11,9 @@
             $users[] = $row;
         }
         if(mysqli_query($conn, $query)) {
-            echo 'Success';
-            var_dump($users);
+            foreach ($users as $user)
+                echo $user['password'];
+            endforeach;
             // if ($result.['field_count'] == int(1)) {
             //     header('Location: home.php');
             // }
