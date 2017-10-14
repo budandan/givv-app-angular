@@ -29,10 +29,25 @@
                 </div>
             </div>
         </nav>
-
-        <div class="jumbotron">
-            <div class="text-center">Register</div>
-        </div>
+        <br>
+        <br>
+        <div class='row'>
+            <div class='col-md-3'></div>
+            <div class='col-md-6'>
+                <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
+                    <div class='form-group'>
+                        <label>Name</label>
+                        <input type='text' name='name' class='form-control'>
+                    </div>
+                    <div class='form-group'>
+                        <label>Password</label>
+                        <input type='text' name='password' class='form-control'>
+                    </div>
+                    <button class='submit-button' type='submit' name='submit'>
+                </form>
+            </div>
+            <div class='col-md-3'></div>
+        </div> 
 
     </body>
 
