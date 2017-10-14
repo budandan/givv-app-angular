@@ -7,12 +7,15 @@
         echo "<script type='text/javascript'>alert('beforesql')</script>";
         $query = "SELECT password FROM Users WHERE name='$name'";
         $result = mysqli_query($conn, $query);
+        while($row = mysqli_fetch_assoc($result)) {
+            $users[] = $row;
+        }
         if(mysqli_query($conn, $query)) {
             echo 'Success';
-            var_dump($result);
-            if ($result['field_count'] == 1) {
-                header('Location: home.php/');
-            }
+            var_dump($users);
+            // if ($result.['field_count'] == int(1)) {
+            //     header('Location: home.php');
+            // }
         } else {
             echo 'ERROR: '. mysqli_error($conn);
         }
