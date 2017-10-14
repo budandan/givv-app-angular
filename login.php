@@ -4,7 +4,7 @@
         // Get Form Data
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
-        $query = "SELECT Count(*) FROM Users WHERE (name='$name' AND password='$password')";
+        $query = "SELECT COUNT(*) FROM Users WHERE (name='$name' AND password='$password')";
         $result = mysqli_query($conn, $query);
         if($result) {
             echo $result;
