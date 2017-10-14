@@ -6,9 +6,9 @@
         $password = mysqli_real_escape_string($conn, $_POST['password']);
         $query = "SELECT password FROM Users WHERE name='$name'";
         $result = mysqli_query($conn, $query);
-        while($row = mysqli_fetch_assoc($result)) {
-            $users[] = $row;
-        }
+        
+        $user = mysqli_fetch_assoc($result);
+
         if(mysqli_query($conn, $query)) {
             echo 'entered password: ' . $password;
             echo 'db password: ' . $user['password'];
