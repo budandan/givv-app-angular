@@ -1,3 +1,19 @@
+<?php
+    require('inc/db.php');
+    if (isset($_POST['submit'])) {
+        // Get Form Data
+        $name = mysqli_real_escape_string($conn, $_POST['name']);
+        $password = mysqli_real_escape_string($conn, $_POST['password']);
+
+        $query = "INSERT INTO Users(name, password) VALUES('$name','$password')";
+
+        if(mysqli_query($conn, $query)) {
+            header('Location: register-success.php/');
+        }
+    }
+    mysqli_close($conn);
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -41,7 +57,7 @@
                     </div>
                     <div class='form-group'>
                         <label>Password</label>
-                        <input type='text' name='password' class='form-control'>
+                        <input type='password' name='password' class='form-control'>
                     </div>
                     <div class='text-center'>
                         <button class='submit-button' type='submit' name='submit'>Create Account</button>
