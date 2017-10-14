@@ -11,7 +11,8 @@
         }
         if(mysqli_query($conn, $query)) {
             if($user['password'] == $password) {
-                echo 'Logging in';
+                echo 'entered password: ' . $password;
+                echo 'db password: ' . $user['password'];
             }
             // if ($result.['field_count'] == int(1)) {
             //     header('Location: home.php');
