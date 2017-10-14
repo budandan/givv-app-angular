@@ -4,13 +4,14 @@
         // Get Form Data
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
+        echo "<script type='text/javascript'>alert('beforesql')</script>";
         $query = "SELECT COUNT(*) FROM Users WHERE (name='$name' AND password='$password')";
         $result = mysqli_query($conn, $query);
         if(mysqli_query($conn, $query)) {
+            echo 'Success';
+            var_dump($result);
             if ($result['field_count'] == 1) {
-                var_dump($result);
-                echo "logging in";
-                //header('Location: home.php/');
+                header('Location: home.php/');
             }
         } else {
             echo 'ERROR: '. mysqli_error($conn);
