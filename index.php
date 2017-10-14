@@ -9,6 +9,16 @@
         echo 'Failed to connect to mysql' . mysqli_connect_errno();
     }
 
+    $query = 'SELECT * FROM Users';
+    
+    $result = mysqli_query($conn, $query);
+
+    $users = mysqli_fetch_all($result, MYSQL_ASSOC);
+    var_dump($users);
+    mysqli_free_result($result);
+
+    mysqli_close($conn);
+
 ?>
 <!DOCTYPE html>
 <html>
