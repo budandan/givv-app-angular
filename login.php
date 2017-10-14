@@ -4,16 +4,15 @@
         // Get Form Data
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
-        echo "<script type='text/javascript'>alert('beforesql')</script>";
         $query = "SELECT password FROM Users WHERE name='$name'";
         $result = mysqli_query($conn, $query);
         while($row = mysqli_fetch_assoc($result)) {
             $users[] = $row;
         }
         if(mysqli_query($conn, $query)) {
-            foreach ($users as $user) :
-                echo $user['password'];
-            endforeach;
+            if($user['password'] == $password) {
+                echo 'Logging in';
+            }
             // if ($result.['field_count'] == int(1)) {
             //     header('Location: home.php');
             // }
