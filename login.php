@@ -10,9 +10,10 @@
             $users[] = $row;
         }
         if(mysqli_query($conn, $query)) {
+            echo 'entered password: ' . $password;
+            echo 'db password: ' . $user['password'];
             if($user['password'] == $password) {
-                echo 'entered password: ' . $password;
-                echo 'db password: ' . $user['password'];
+                
             }
             // if ($result.['field_count'] == int(1)) {
             //     header('Location: home.php');
