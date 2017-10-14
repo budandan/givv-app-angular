@@ -10,6 +10,9 @@
         if(mysqli_query($conn, $query)) {
             echo 'Success';
             var_dump($result);
+            if ($result['field_count'] == 1) {
+                header('Location: home.php/');
+            }
         } else {
             echo 'ERROR: '. mysqli_error($conn);
         }
