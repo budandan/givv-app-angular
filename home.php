@@ -1,20 +1,3 @@
-<?php
-    require('inc/db.php');
-    if (isset($_POST['submit'])) {
-        // Get Form Data
-        $name = mysqli_real_escape_string($conn, $_POST['name']);
-        $password = mysqli_real_escape_string($conn, $_POST['password']);
-        echo '<script type="text/javascript">alert("set")</script>';
-        $query = "INSERT INTO Users(name, password) VALUES('$name','$password')";
-
-        if(mysqli_query($conn, $query)) {
-            echo 'Successfully registered with user.name: '. $name;
-        } else {
-            echo 'ERROR: '. mysqli_error($conn);
-        }
-    }
-    mysqli_close($conn);
-?>
 
 <!DOCTYPE html>
 <html>
@@ -41,8 +24,8 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                    <li><a href="register.php">Register</a></li>
-                    <li><a href="login.php">Login</a></li>
+                    <li><a href="my-profile.php">My Profile</a></li>
+                    <li><a href="project-list.php">Projects</a></li>
                     </ul>
                 </div>
             </div>
@@ -62,7 +45,7 @@
                         <input type='password' name='password' class='form-control'>
                     </div>
                     <div class='text-center'>
-                        <button class='submit-button' type='submit' name='submit'>Create Account</button>
+                        <button class='submit-button' type='submit' name='submit'>Login</button>
                     </div>
                 </form>
             </div>

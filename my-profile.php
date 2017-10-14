@@ -13,8 +13,7 @@
         }
     }
     mysqli_close($conn);
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css">
@@ -47,25 +46,9 @@
         </nav>
         <br>
         <br>
-        <div class='row'>
-            <div class='col-md-3'></div>
-            <div class='col-md-6'>
-                <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
-                    <div class='form-group'>
-                        <label>Name</label>
-                        <input type='text' name='name' class='form-control'>
-                    </div>
-                    <div class='form-group'>
-                        <label>Password</label>
-                        <input type='password' name='password' class='form-control'>
-                    </div>
-                    <div class='text-center'>
-                        <button class='submit-button' type='submit' name='submit'>Login</button>
-                    </div>
-                </form>
-            </div>
-            <div class='col-md-3'></div>
-        </div> 
+        <div class='jumbotron'>
+            <p>my profile</p>
+        </div>
 
     </body>
 
