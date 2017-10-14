@@ -7,7 +7,6 @@
         $query = "SELECT COUNT(*) FROM Users WHERE (name='$name' AND password='$password')";
         $result = mysqli_query($conn, $query);
         if(mysqli_query($conn, $query)) {
-            echo 'Success';
             if ($result['field_count'] == 1) {
                 echo "<script type='text/javascript'>alert('logging in')</script>";
                 //header('Location: home.php/');
