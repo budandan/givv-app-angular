@@ -13,7 +13,7 @@
 
     $result = mysqli_query($conn, $query);
     echo "<script type='text/javascript'>alert('after sql');</script>";
-    $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    $users = mysqli_fetch_assoc($result);
     var_dump($users);
 
     //echo "<script type='text/javascript'>console.log('test');</script>";
