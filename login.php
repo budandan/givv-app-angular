@@ -11,7 +11,7 @@
             $users[] = $row;
         }
         if(mysqli_query($conn, $query)) {
-            foreach ($users as $user)
+            foreach ($users as $user) :
                 echo $user['password'];
             endforeach;
             // if ($result.['field_count'] == int(1)) {
