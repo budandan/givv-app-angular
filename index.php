@@ -1,7 +1,7 @@
 <?php
     include ('config.php');
     // Create Connection
-    $conn = mysqli_connect('10.24.16.208', 'root', 'givv-master', 'test');
+    $conn = mysqli_connect('10.24.16.208', 'root', 'givv-master', 'Test');
 
     // Check Connection
     if (mysqli_connect_errno()) {
@@ -22,7 +22,7 @@
     </head>
 
     <body>
-        <p>hi</p>
+        <p></p>
     </body>
 
 </html>
