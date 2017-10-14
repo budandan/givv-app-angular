@@ -9,6 +9,7 @@
         $result = mysqli_query($conn, $query);
         if(mysqli_query($conn, $query)) {
             echo 'Success';
+            var_dump($result);
         } else {
             echo 'ERROR: '. mysqli_error($conn);
         }
