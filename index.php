@@ -8,9 +8,10 @@
         // Connection Failed
         echo 'Failed to connect to mysql' . mysqli_connect_errno();
     }
-
-    $query = 'SELECT * FROM Users;';
     
+    echo '<script>alert('before sql');</script>';
+    $query = 'SELECT * FROM Users;';
+    echo '<script>alert('after sql');</script>';
     $result = mysqli_query($conn, $query);
 
     $users = mysqli_fetch_all($result, MYSQL_ASSOC);
