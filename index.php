@@ -2,7 +2,7 @@
     require('db.php');
     $query = 'SELECT * FROM Users;';
     $result = mysqli_query($conn, $query);
-    $users = mysqli_fetch_assoc($result);
+    $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
     var_dump($users);
     mysqli_free_result($result);
     mysqli_close($conn);
@@ -18,13 +18,6 @@
     </head>
 
     <body>
-        <?php for ($i = 0; $i < $users.sizeOf(); $i++) {?>
-        <div>
-            <h2><?php echo $users[$i]['name'];?></h2>
-            <h3><?php echo $users[$i]['name'];?></h3>
-            <h4><?php echo $users[$i]['name'];?></h4>
-        </div>
-        <?php } ?>
     </body>
 
 </html>
