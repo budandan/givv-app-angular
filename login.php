@@ -8,7 +8,7 @@
         $result = mysqli_query($conn, $query);
         if(mysqli_query($conn, $query)) {
             if ($result['field_count'] == 1) {
-                echo "<script type='text/javascript'>alert('logging in')</script>";
+                echo "logging in";
                 //header('Location: home.php/');
             }
         } else {
