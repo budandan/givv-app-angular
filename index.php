@@ -1,7 +1,7 @@
 <?php
     include ('index.php');
     // Create Connection
-    $conn = mysqli_connect(DB_HOST, 'root', 'givv-master', 'test');
+    $conn = mysqli_connect('10.24.16.208', 'root', 'givv-master', 'test');
 
     // Check Connection
     if (mysqli_connect_errno()) {
