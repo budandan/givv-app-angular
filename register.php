@@ -43,7 +43,9 @@
                         <label>Password</label>
                         <input type='text' name='password' class='form-control'>
                     </div>
-                    <button class='submit-button' type='submit' name='submit'>
+                    <div class='text-center'>
+                        <button class='submit-button' type='submit' name='submit'>Create Account</button>
+                    </div>
                 </form>
             </div>
             <div class='col-md-3'></div>
