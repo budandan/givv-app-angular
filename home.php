@@ -32,25 +32,11 @@
         </nav>
         <br>
         <br>
-        <div class='row'>
-            <div class='col-md-3'></div>
-            <div class='col-md-6'>
-                <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
-                    <div class='form-group'>
-                        <label>Name</label>
-                        <input type='text' name='name' class='form-control'>
-                    </div>
-                    <div class='form-group'>
-                        <label>Password</label>
-                        <input type='password' name='password' class='form-control'>
-                    </div>
-                    <div class='text-center'>
-                        <button class='submit-button' type='submit' name='submit'>Login</button>
-                    </div>
-                </form>
+        <div class='jumbotron'>
+            <div class='text-center'>
+                <h1>Home</h1>
             </div>
-            <div class='col-md-3'></div>
-        </div> 
+        </div>
 
     </body>
 
