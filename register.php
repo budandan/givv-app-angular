@@ -4,11 +4,13 @@
         // Get Form Data
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
-
+        echo '<script type="text/javascript">alert("set")</script>';
         $query = "INSERT INTO Users(name, password) VALUES('$name','$password')";
 
         if(mysqli_query($conn, $query)) {
-            header('Location: register-success.php/');
+            echo 'Successfully registered with user.name: '. $name;
+        } else {
+            echo 'ERROR: '. mysqli_error($conn);
         }
     }
     mysqli_close($conn);
