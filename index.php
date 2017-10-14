@@ -18,11 +18,13 @@
     </head>
 
     <body>
-        <?php foreach($users as $user) :?>
+        <?php for ($i = 0; $i < $users.sizeOf(); $i++) {?>
         <div>
-            <h2><?php echo $user['name'];?></h2>
+            <h2><?php echo $users[$i]['name'];?></h2>
+            <h3><?php echo $users[$i]['name'];?></h3>
+            <h4><?php echo $users[$i]['name'];?></h4>
         </div>
-        <?php endforeach; ?>
+        <?php } ?>
     </body>
 
 </html>
