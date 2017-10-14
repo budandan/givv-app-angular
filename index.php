@@ -17,12 +17,11 @@
     </head>
 
     <body>
-        <?php
-            foreach($users as $user) :
-        ?>
+        <?php foreach($users as $user) :?>
         <div class="jumbotron">
             <h2><?php echo $user['name'];?></h2>
         </div>
+        <?php endforeach; ?>
     </body>
 
 </html>
