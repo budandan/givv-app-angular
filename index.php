@@ -9,9 +9,9 @@
         echo 'Failed to connect to mysql' . mysqli_connect_errno();
     }
     
-    echo '<script>alert('before sql');</script>';
+    echo "<script type='text/javascript'>alert('before sql');</script>";
     $query = 'SELECT * FROM Users;';
-    echo '<script>alert('after sql');</script>';
+    echo "<script type='text/javascript'>alert('after sql');</script>";
     $result = mysqli_query($conn, $query);
 
     $users = mysqli_fetch_all($result, MYSQL_ASSOC);
