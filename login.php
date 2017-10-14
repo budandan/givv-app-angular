@@ -12,7 +12,7 @@
         if(mysqli_query($conn, $query)) {
             echo 'entered password: ' . $password;
             echo 'db password: ' . $user['password'];
-            if($user['password'] == $password) {
+            if($user['password'] == $password && $user.sizeOf() != 0) {
                 header('Location: home.php');
             }
             // if ($result.['field_count'] == int(1)) {
