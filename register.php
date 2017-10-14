@@ -4,7 +4,6 @@
         // Get Form Data
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
-        echo '<script type="text/javascript">alert("set")</script>';
         $query = "INSERT INTO Users(name, password) VALUES('$name','$password')";
 
         if(mysqli_query($conn, $query)) {
