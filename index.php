@@ -15,7 +15,8 @@
     $result = mysqli_query($conn, $query);
     echo "<script type='text/javascript'>alert('after sql');</script>";
     $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    var_dump($users);
+    echo "<script type='text/javascript'>console.log($users);</script>";
+    
     mysqli_free_result($result);
 
     mysqli_close($conn);
