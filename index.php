@@ -2,8 +2,10 @@
     require('db.php');
     $query = 'SELECT * FROM Users;';
     $result = mysqli_query($conn, $query);
-    $users = mysqli_fetch_all($result, MYSQLI_NUM);
-    var_dump($users);
+    while($row = mysqli_fetch_assoc($result)) {
+        $arr[] = $row;
+    }
+        var_dump($arr);
     mysqli_free_result($result);
     mysqli_close($conn);
 ?>
