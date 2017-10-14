@@ -7,7 +7,7 @@
         $query = "SELECT Count(*) FROM Users WHERE (name='$name' AND password='$password')";
 
         if(mysqli_query($conn, $query)) {
-            if ($query == 1)
+            if ($query == '1')
                 header('Location: home.php');
         } else {
             echo 'ERROR: '. mysqli_error($conn);
