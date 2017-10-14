@@ -3,9 +3,9 @@
     $query = 'SELECT * FROM Users;';
     $result = mysqli_query($conn, $query);
     while($row = mysqli_fetch_assoc($result)) {
-        $arr[] = $row;
+        $users[] = $row;
     }
-        var_dump($arr);
+    var_dump($users);
     mysqli_free_result($result);
     mysqli_close($conn);
 ?>
@@ -20,6 +20,9 @@
     </head>
 
     <body>
+        <?php foreach($users as $user) :?>
+        <h2><?php echo $user['name'];?></h2>
+        <?php endforeach;?>
     </body>
 
 </html>
