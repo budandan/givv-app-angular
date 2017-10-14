@@ -1,5 +1,5 @@
 <?php
-    include ('index.php');
+    include ('config.php');
     // Create Connection
     $conn = mysqli_connect('10.24.16.208', 'root', 'givv-master', 'test');
 
