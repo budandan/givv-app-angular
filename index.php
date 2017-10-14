@@ -1,27 +1,10 @@
 <?php
-    // Create Connection
-    $conn = mysqli_connect('localhost', 'root', 'givv-master', 'Test');
-
-    // Check Connection
-    if (mysqli_connect_errno()) {
-        // Connection Failed
-        echo 'Failed to connect to mysql' . mysqli_connect_errno();
-    }
-    
-    echo "<script type='text/javascript'>alert('before sql');</script>";
+    require('db.php');
     $query = 'SELECT * FROM Users;';
-
     $result = mysqli_query($conn, $query);
-    echo "<script type='text/javascript'>alert('after sql');</script>";
     $users = mysqli_fetch_assoc($result);
-    var_dump($users);
-
-    //echo "<script type='text/javascript'>console.log('test');</script>";
-    
     mysqli_free_result($result);
-
     mysqli_close($conn);
-
 ?>
 <!DOCTYPE html>
 <html>
