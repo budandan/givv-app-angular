@@ -10,7 +10,7 @@
             echo 'Success';
             if ($result['field_count'] == 1) {
                 echo "<script type='text/javascript'>alert('logging in')</script>";
-                header('Location: home.php/');
+                //header('Location: home.php/');
             }
         } else {
             echo 'ERROR: '. mysqli_error($conn);
