@@ -9,7 +9,7 @@
         echo 'Failed to connect to mysql' . mysqli_connect_errno();
     }
 
-    $query = 'SELECT * FROM Users';
+    $query = 'SELECT * FROM Users;';
     
     $result = mysqli_query($conn, $query);
 
