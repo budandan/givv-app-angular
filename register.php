@@ -1,13 +1,3 @@
-<?php
-    require('inc/db.php');
-    $query = 'SELECT * FROM Users;';
-    $result = mysqli_query($conn, $query);
-    while($row = mysqli_fetch_assoc($result)) {
-        $users[] = $row;
-    }
-    mysqli_free_result($result);
-    mysqli_close($conn);
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -41,7 +31,7 @@
         </nav>
 
         <div class="jumbotron">
-            <div class="text-center">GIVV</div>
+            <div class="text-center">Register</div>
         </div>
 
     </body>
