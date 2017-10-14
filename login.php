@@ -8,6 +8,7 @@
         $result = mysqli_query($conn, $query);
         if(mysqli_query($conn, $query)) {
             if ($result['field_count'] == 1) {
+                var_dump($result);
                 echo "logging in";
                 //header('Location: home.php/');
             }
