@@ -3,6 +3,7 @@
     $query = 'SELECT * FROM Users;';
     $result = mysqli_query($conn, $query);
     $users = mysqli_fetch_assoc($result);
+    var_dump($users);
     mysqli_free_result($result);
     mysqli_close($conn);
 ?>
